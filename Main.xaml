@@ -136,11 +136,7 @@
   <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="622,2826" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="p9:DocumentTaxonomy" Name="taxonomy" />
-      <Variable x:TypeArguments="x:String" Name="strDocPath">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">sample_data\sample_invoices\1.png</Literal>
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:String" Default="sample_data\sample_invoices\1.png" Name="strDocPath" />
       <Variable x:TypeArguments="x:String" Name="strDocText" />
       <Variable x:TypeArguments="p4:Document" Name="DOM" />
       <Variable x:TypeArguments="p7:ClassificationResult[]" Name="classificationResults" />
@@ -149,7 +145,7 @@
       <Variable x:TypeArguments="sd2:DataSet" Name="datasetResults" />
       <Variable x:TypeArguments="x:String" Name="strResultsWorkbook">
         <Variable.Default>
-          <Literal x:TypeArguments="x:String">sample_data\out\Report.xlsx</Literal>
+          <Literal x:TypeArguments="x:String">sample_data\out\</Literal>
         </Variable.Default>
       </Variable>
       <Variable x:TypeArguments="sd2:DataTable" Name="dtOutput" />
@@ -302,7 +298,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="484,309" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="[strResultsWorkbook]">
+            <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="484,309" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="[strResultsWorkbook + &quot;Report-&quot; + DateTime.Now.ToString(&quot;yyyy-MM-dd-HH-mm-ss-fff&quot;) + &quot;.xlsx&quot;]">
               <ui:ExcelApplicationScope.Body>
                 <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                   <ActivityAction.Argument>
