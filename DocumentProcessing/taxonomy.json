@@ -80,8 +80,52 @@
           "DataSource": null
         },
         {
+          "FieldId": "YourCompany.AccountPayableDepartment.InvoiceNumber.VendorName",
+          "FieldName": "Vendor Name",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fcd98f"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "r"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "YourCompany.AccountPayableDepartment.InvoiceNumber.LineItems",
+          "FieldName": "Line Items",
+          "IsMultiValue": true,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#b37710"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "m"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
           "FieldId": "YourCompany.AccountPayableDepartment.InvoiceNumber.Total",
-          "FieldName": "Total",
+          "FieldName": "Total Amount",
           "IsMultiValue": false,
           "Type": "Text",
           "DeriveFieldsFormat": "",
@@ -95,6 +139,28 @@
             {
               "Key": "Hotkey",
               "Value": "l"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "YourCompany.AccountPayableDepartment.InvoiceNumber.PaymentTerms",
+          "FieldName": "Payment Terms",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#5fcfb9"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "y"
             }
           ],
           "RuleSet": null,
