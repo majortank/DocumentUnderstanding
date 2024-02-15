@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/intelligentocr" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:p2="http://schemas.uipath.com/workflow/activities/intelligentocr/classification" xmlns:p3="http://schemas.uipath.com/workflow/activities/document-processing-contracts/classification" xmlns:p4="http://schemas.uipath.com/workflow/activities/document-processing-contracts/dom" xmlns:p5="http://schemas.uipath.com/workflow/activities/intelligentocr/extraction" xmlns:p6="http://schemas.uipath.com/workflow/activities/documentunderstanding-ml" xmlns:p7="http://schemas.uipath.com/workflow/activities/document-processing-contracts/extraction" xmlns:p8="http://schemas.uipath.com/workflow/activities/document-processing-contracts/results" xmlns:p9="http://schemas.uipath.com/workflow/activities/document-processing-contracts/taxonomy" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd2="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:ucas="clr-namespace:UiPath.Core.Activities.Storage;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/intelligentocr" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:p2="http://schemas.uipath.com/workflow/activities/intelligentocr/classification" xmlns:p3="http://schemas.uipath.com/workflow/activities/document-processing-contracts/classification" xmlns:p4="http://schemas.uipath.com/workflow/activities/document-processing-contracts/dom" xmlns:p5="http://schemas.uipath.com/workflow/activities/intelligentocr/extraction" xmlns:p6="http://schemas.uipath.com/workflow/activities/documentunderstanding-ml" xmlns:p7="http://schemas.uipath.com/workflow/activities/document-processing-contracts/results" xmlns:p8="http://schemas.uipath.com/workflow/activities/document-processing-contracts/extraction" xmlns:p9="http://schemas.uipath.com/workflow/activities/document-processing-contracts/taxonomy" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd2="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:ucas="clr-namespace:UiPath.Core.Activities.Storage;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="inFilename" Type="InArgument(x:String)" />
     <x:Property Name="outFilename" Type="OutArgument(x:String)" />
@@ -155,9 +155,9 @@
       <Variable x:TypeArguments="x:String" Default="C:\Users\black-XL-ROSE\Downloads\UiPath\UiPath2\PSP Documents\Archive 2\Download (65).pdf" Name="strDocPath" />
       <Variable x:TypeArguments="x:String" Name="strDocText" />
       <Variable x:TypeArguments="p4:Document" Name="DOM" />
-      <Variable x:TypeArguments="p8:ClassificationResult[]" Name="classificationResults" />
-      <Variable x:TypeArguments="p8:ExtractionResult" Name="extractionResults" />
-      <Variable x:TypeArguments="p8:ExtractionResult" Name="ValidatedResults" />
+      <Variable x:TypeArguments="p7:ClassificationResult[]" Name="classificationResults" />
+      <Variable x:TypeArguments="p7:ExtractionResult" Name="extractionResults" />
+      <Variable x:TypeArguments="p7:ExtractionResult" Name="ValidatedResults" />
       <Variable x:TypeArguments="sd:DataSet" Name="datasetResults" />
       <Variable x:TypeArguments="x:String" Default="sample_data\out\" Name="strResultsWorkbook" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtOutput" />
@@ -251,9 +251,9 @@
       <p5:DataExtractionScope.Extractors>
         <p6:GenerativeExtractor DisplayName="Generative Extractor" sap:VirtualizedContainerService.HintSize="234,76" sap2010:WorkflowViewState.IdRef="GenerativeExtractor_1" PersistenceId="UIaeb054cea91e486a9fee059cadb0a315" Prompt="{}{&quot;YourCompany.AccountPayableDepartment.InvoiceNumber.InvoiceNumber&quot;:&quot; A unique identifier assigned to each purchase order&quot;,&quot;YourCompany.AccountPayableDepartment.InvoiceNumber.IssueDate&quot;:&quot;The date when the purchase order was issued.&quot;,&quot;YourCompany.AccountPayableDepartment.InvoiceNumber.VendorName&quot;:&quot;The name of the vendor or supplier.&quot;,&quot;YourCompany.AccountPayableDepartment.InvoiceNumber.BillingAddress&quot;:&quot;The address details of the vendor or supplier.&quot;,&quot;YourCompany.AccountPayableDepartment.InvoiceNumber.ShippingName&quot;:&quot;The name of the individual or entity to which the goods should be delivered.&quot;,&quot;YourCompany.AccountPayableDepartment.InvoiceNumber.ShippingAddress&quot;:&quot;The address to which the goods should be delivered.&quot;,&quot;YourCompany.AccountPayableDepartment.InvoiceNumber.Total&quot;:&quot;The total monetary value of the purchase order.&quot;,&quot;YourCompany.AccountPayableDepartment.InvoiceNumber.DueDate&quot;:&quot;The date by which the goods or services should be delivered.&quot;,&quot;YourCompany.AccountPayableDepartment.InvoiceNumber.PaymentTerms&quot;:&quot;Payment terms: No deliveries after 1500 without prior arrangement, site not responsible for offloading, fixed rates &amp; quantities, discrepancies challenged before deliveries, Motheo reserves order cancellation/amendment rights.&quot;,&quot;YourCompany.AccountPayableDepartment.InvoiceNumber.Currency&quot;:&quot;The name of the client or recipient.&quot;,&quot;YourCompany.AccountPayableDepartment.InvoiceNumber.ClientAddress&quot;:&quot;The address details of the client or recipient.&quot;}" RetryOnFailure="True" Timeout="3600000">
           <p6:GenerativeExtractor.DocumentBounds>
-            <InArgument x:TypeArguments="p8:ResultsDocumentBounds">
-              <DelegateArgumentValue x:TypeArguments="p8:ResultsDocumentBounds">
-                <DelegateInArgument x:TypeArguments="p8:ResultsDocumentBounds" Name="DocumentBounds" />
+            <InArgument x:TypeArguments="p7:ResultsDocumentBounds">
+              <DelegateArgumentValue x:TypeArguments="p7:ResultsDocumentBounds">
+                <DelegateInArgument x:TypeArguments="p7:ResultsDocumentBounds" Name="DocumentBounds" />
               </DelegateArgumentValue>
             </InArgument>
           </p6:GenerativeExtractor.DocumentBounds>
@@ -279,16 +279,16 @@
             </InArgument>
           </p6:GenerativeExtractor.DocumentText>
           <p6:GenerativeExtractor.ExtractorDocumentType>
-            <InArgument x:TypeArguments="p7:ExtractorDocumentType">
-              <DelegateArgumentValue x:TypeArguments="p7:ExtractorDocumentType">
-                <DelegateInArgument x:TypeArguments="p7:ExtractorDocumentType" Name="ExtractorDocumentType" />
+            <InArgument x:TypeArguments="p8:ExtractorDocumentType">
+              <DelegateArgumentValue x:TypeArguments="p8:ExtractorDocumentType">
+                <DelegateInArgument x:TypeArguments="p8:ExtractorDocumentType" Name="ExtractorDocumentType" />
               </DelegateArgumentValue>
             </InArgument>
           </p6:GenerativeExtractor.ExtractorDocumentType>
           <p6:GenerativeExtractor.ExtractorResult>
-            <OutArgument x:TypeArguments="p7:ExtractorResult">
-              <DelegateArgumentReference x:TypeArguments="p7:ExtractorResult">
-                <DelegateOutArgument x:TypeArguments="p7:ExtractorResult" Name="ExtractorResult" />
+            <OutArgument x:TypeArguments="p8:ExtractorResult">
+              <DelegateArgumentReference x:TypeArguments="p8:ExtractorResult">
+                <DelegateOutArgument x:TypeArguments="p8:ExtractorResult" Name="ExtractorResult" />
               </DelegateArgumentReference>
             </OutArgument>
           </p6:GenerativeExtractor.ExtractorResult>
@@ -318,7 +318,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="484,309" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="[strResultsWorkbook + &quot;POReport.xlsx&quot;]">
+            <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="484,309" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[strResultsWorkbook + &quot;POReport.xlsx&quot;]">
               <ui:ExcelApplicationScope.Body>
                 <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                   <ActivityAction.Argument>
