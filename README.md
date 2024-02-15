@@ -1,4 +1,4 @@
-# Invoice Understanding Process
+# Document Understanding Processes
 - This repository contains a document understanding process for invoices. The process is designed to extract key information from invoices, including the invoice number, issue date, due date, and total amount.
 
 - The process uses machine learning techniques to automatically identify and extract the relevant information from the invoices. It can handle a wide range of invoice formats and layouts, making it a versatile tool for businesses of all sizes.
