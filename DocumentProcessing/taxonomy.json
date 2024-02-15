@@ -37,7 +37,7 @@
         },
         {
           "FieldId": "YourCompany.AccountPayableDepartment.InvoiceNumber.IssueDate",
-          "FieldName": "PO Date",
+          "FieldName": "Date",
           "IsMultiValue": false,
           "Type": "Text",
           "DeriveFieldsFormat": "",
@@ -80,6 +80,72 @@
           "DataSource": null
         },
         {
+          "FieldId": "YourCompany.AccountPayableDepartment.InvoiceNumber.BillingAddress",
+          "FieldName": "Vendor Address",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#d2d550"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "g"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "YourCompany.AccountPayableDepartment.InvoiceNumber.ShippingName",
+          "FieldName": "Shipping Name",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#6eb84a"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "m"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "YourCompany.AccountPayableDepartment.InvoiceNumber.ShippingAddress",
+          "FieldName": "Shipping Address",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fda891"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "h"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
           "FieldId": "YourCompany.AccountPayableDepartment.InvoiceNumber.Total",
           "FieldName": "Total Amount",
           "IsMultiValue": false,
@@ -103,7 +169,7 @@
         },
         {
           "FieldId": "YourCompany.AccountPayableDepartment.InvoiceNumber.DueDate",
-          "FieldName": "Delivery Date",
+          "FieldName": "Delivery by Date",
           "IsMultiValue": false,
           "Type": "Text",
           "DeriveFieldsFormat": "",
@@ -147,7 +213,7 @@
         },
         {
           "FieldId": "YourCompany.AccountPayableDepartment.InvoiceNumber.Currency",
-          "FieldName": "Currency",
+          "FieldName": "Client Name",
           "IsMultiValue": false,
           "Type": "Text",
           "DeriveFieldsFormat": "",
@@ -161,6 +227,28 @@
             {
               "Key": "Hotkey",
               "Value": "c"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "YourCompany.AccountPayableDepartment.InvoiceNumber.ClientAddress",
+          "FieldName": "Client Address",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#b222cf"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "q"
             }
           ],
           "RuleSet": null,
