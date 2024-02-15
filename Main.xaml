@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>701,3314</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>896,3314</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -152,11 +152,7 @@
   <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="622,3249" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="p9:DocumentTaxonomy" Name="taxonomy" />
-      <Variable x:TypeArguments="x:String" Name="strDocPath">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">C:\Users\black-XL-ROSE\Downloads\UiPath\UiPath2\PSP Documents\Archive 2\Download (65).pdf</Literal>
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:String" Default="C:\Users\black-XL-ROSE\Downloads\UiPath\UiPath2\PSP Documents\Archive 2\Download (65).pdf" Name="strDocPath" />
       <Variable x:TypeArguments="x:String" Name="strDocText" />
       <Variable x:TypeArguments="p4:Document" Name="DOM" />
       <Variable x:TypeArguments="p7:ClassificationResult[]" Name="classificationResults" />
