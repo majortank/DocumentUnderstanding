@@ -1,7 +1,7 @@
 {
-  "name": "Invoice_Document_Understanding",
+  "name": "Purchaseorder_Document_Understanding",
   "projectId": "2ed9e1e8-4d24-4702-92a0-07f73e308ec8",
-  "description": "Tankiso's Invoice_Document_Understanding ",
+  "description": "Tankiso's Purchase Order Document_Understanding ",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.DocumentUnderstanding.ML.Activities": "[1.26.0-preview]",

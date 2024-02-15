@@ -4,9 +4,9 @@
     {
       "Connections": [],
       "DocumentTypeId": "YourCompany.AccountPayableDepartment.InvoiceNumber",
-      "Group": "Your Company",
-      "Category": "Account Payable Department",
-      "Name": "Invoice",
+      "Group": "Tankisocorp",
+      "Category": "Procurement",
+      "Name": "Purchase order",
       "OptionalUniqueIdentifier": "",
       "TypeField": {
         "FieldId": "YourCompany.AccountPayableDepartment.InvoiceNumber.DocumentType",
@@ -15,7 +15,7 @@
       "Fields": [
         {
           "FieldId": "YourCompany.AccountPayableDepartment.InvoiceNumber.InvoiceNumber",
-          "FieldName": "Invoice Number",
+          "FieldName": "Purchase Order Number",
           "IsMultiValue": false,
           "Type": "Text",
           "DeriveFieldsFormat": "",
@@ -37,7 +37,7 @@
         },
         {
           "FieldId": "YourCompany.AccountPayableDepartment.InvoiceNumber.IssueDate",
-          "FieldName": "Issue Date",
+          "FieldName": "PO Date",
           "IsMultiValue": false,
           "Type": "Text",
           "DeriveFieldsFormat": "",
@@ -51,28 +51,6 @@
             {
               "Key": "Hotkey",
               "Value": "e"
-            }
-          ],
-          "RuleSet": null,
-          "DefaultValue": "",
-          "DataSource": null
-        },
-        {
-          "FieldId": "YourCompany.AccountPayableDepartment.InvoiceNumber.DueDate",
-          "FieldName": "Due Date",
-          "IsMultiValue": false,
-          "Type": "Text",
-          "DeriveFieldsFormat": "",
-          "Components": [],
-          "SetValues": [],
-          "Metadata": [
-            {
-              "Key": "Color",
-              "Value": "#b34692"
-            },
-            {
-              "Key": "Hotkey",
-              "Value": "a"
             }
           ],
           "RuleSet": null,
@@ -95,6 +73,50 @@
             {
               "Key": "Hotkey",
               "Value": "r"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "YourCompany.AccountPayableDepartment.InvoiceNumber.ShippingAddress",
+          "FieldName": "Shipping Address",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fda891"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "h"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "YourCompany.AccountPayableDepartment.InvoiceNumber.BillingAddress",
+          "FieldName": "Billing Address",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#5fcfb9"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "g"
             }
           ],
           "RuleSet": null,
@@ -146,6 +168,28 @@
           "DataSource": null
         },
         {
+          "FieldId": "YourCompany.AccountPayableDepartment.InvoiceNumber.DueDate",
+          "FieldName": "Delivery Date",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#b34692"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "a"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
           "FieldId": "YourCompany.AccountPayableDepartment.InvoiceNumber.PaymentTerms",
           "FieldName": "Payment Terms",
           "IsMultiValue": false,
@@ -166,15 +210,37 @@
           "RuleSet": null,
           "DefaultValue": "",
           "DataSource": null
+        },
+        {
+          "FieldId": "YourCompany.AccountPayableDepartment.InvoiceNumber.Currency",
+          "FieldName": "Currency",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#a8ce74"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "c"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
         }
       ]
     }
   ],
   "Groups": [
     {
-      "Name": "Your Company",
+      "Name": "Tankisocorp",
       "Categories": [
-        "Account Payable Department"
+        "Procurement"
       ]
     }
   ],
