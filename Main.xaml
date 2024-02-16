@@ -152,11 +152,7 @@
   <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="622,3512" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="p9:DocumentTaxonomy" Name="taxonomy" />
-      <Variable x:TypeArguments="x:String" Name="strDocPath">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">C:\Users\black-XL-ROSE\Downloads\UiPath\PSP Documents\SAMPLE DATA\PO\Download (2).pdf</Literal>
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:String" Default="C:\Users\black-XL-ROSE\Downloads\UiPath\PSP Documents\SAMPLE DATA\PO\Download (2).pdf" Name="strDocPath" />
       <Variable x:TypeArguments="x:String" Name="strDocText" />
       <Variable x:TypeArguments="p4:Document" Name="DOM" />
       <Variable x:TypeArguments="p7:ClassificationResult[]" Name="classificationResults" />
@@ -227,7 +223,7 @@
     </p:DigitizeDocument>
     <p2:ClassifyDocumentScope ClassificationResults="[classificationResults]" DisplayName="Classify Document Scope" DocumentObjectModel="[DOM]" DocumentPath="[strDocPath]" DocumentText="[strDocText]" sap:VirtualizedContainerService.HintSize="560,436" sap2010:WorkflowViewState.IdRef="ClassifyDocumentScope_1" Taxonomy="[taxonomy]" TaxonomyConfiguration="{}{&quot;TaxonomyMappings&quot;:{&quot;UI15aafab7ece6494cb033879b2f9f1c2d&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;YourCompany.AccountPayableDepartment.InvoiceNumber&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;YourCompany.AccountPayableDepartment.InvoiceNumber&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true}}}},&quot;ClassifierMinimumConfidence&quot;:{&quot;UI15aafab7ece6494cb033879b2f9f1c2d&quot;:&quot;0&quot;},&quot;DocumentTypesByPersistenceId&quot;:{&quot;UI15aafab7ece6494cb033879b2f9f1c2d&quot;:[]}}">
       <p2:ClassifyDocumentScope.Classifiers>
-        <p2:KeywordBasedClassifier HumanValidatedData="{x:Null}" LearningData="{x:Null}" DisplayName="Keyword Based Classifier" sap:VirtualizedContainerService.HintSize="234,114" sap2010:WorkflowViewState.IdRef="KeywordBasedClassifier_1" LearningFilePath="sample_data\out\lpath1.json" PersistenceId="UI15aafab7ece6494cb033879b2f9f1c2d">
+        <p2:KeywordBasedClassifier HumanValidatedData="{x:Null}" LearningData="{x:Null}" DisplayName="Keyword Based Classifier" sap:VirtualizedContainerService.HintSize="234,114" sap2010:WorkflowViewState.IdRef="KeywordBasedClassifier_1" LearningFilePath="LearningPath\path.json" PersistenceId="UI15aafab7ece6494cb033879b2f9f1c2d">
           <p2:KeywordBasedClassifier.ClassifierResult>
             <OutArgument x:TypeArguments="p3:ClassifierResult">
               <DelegateArgumentReference x:TypeArguments="p3:ClassifierResult">
